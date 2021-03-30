@@ -1,0 +1,37 @@
+//id, name, age, password
+//type, it includes Student, Teacher, Course Manager, Finance Manager
+user(id, name, age, type, password)
+
+//cid, cname, schedule, credit, capacity
+//ctype, the type of the course, online or offline
+//detail, if online, that is url. if offline, that is location
+course(cid, cname, schedule, credit, capacity, ctype, detail, erule)
+
+//every student could register courses
+//student id (user id)
+//cid, course id
+//cgrade, for the course how much grade the student get
+register_course(sid, cid, cgrade)
+
+//aid, assignment id
+//cid, every assignment belongs to a course
+//point, an assignment has a number of points
+//atype, the assignment is of essay or multiple choices
+//question, the title of the assignment
+assignment(aid, cid, point, atype, question)
+
+//sid, student id (user id)
+//aid, assignment id
+//content, the submission of student for the assignment
+//agrade, how much grade a teacher give
+submit_assignment(sid, aid, content, agrade)
+
+//schid, scholarship id,
+//schname, scholarship name,
+//schtype, the type of scholarship, it is status based or merit based
+//benefit, how much finance benefit the scholarship gives, 20% or $2000
+scholarship(schid, schname, schtype, benefit)
+
+//sid, student id (user id)
+//schid, the scholarship id
+attach_scholarship(sid, schid)

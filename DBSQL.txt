@@ -1,0 +1,126 @@
+create database registerDB;
+use registerDB;
+
+create table user(
+	id varchar(10),
+	name varchar(20),
+	age int,
+	type varchar(20),
+	password varchar(20)
+);
+
+insert into user values ('123', 'david01', 32, 'Course Manager', 'lko');
+insert into user values ('789', 'david02', 36, 'Finance Manager', 'fgh');
+insert into user values ('653', 'david03', 31, 'Teacher', 'asd');
+insert into user values ('651', 'david04', 38, 'Teacher', 'qwe');
+insert into user values ('321', 'david05', 32, 'Teacher', 'rfv');
+insert into user values ('456', 'david06', 16, 'Student', 'abc');
+insert into user values ('752', 'david07', 17, 'Student', 'cde');
+insert into user values ('980', 'david08', 18, 'Student', 'frv');
+insert into user values ('879', 'david09', 16, 'Student', 'hfr');
+insert into user values ('257', 'david10', 19, 'Student', 'poi');
+insert into user values ('369', 'david11', 16, 'Student', 'thf');
+
+create table course(
+	cid varchar(10),
+	cname varchar(20),
+	schedule text,
+	credit int,
+	capacity int,
+	ctype varchar(20),
+	detail text,
+	erule text
+);
+
+insert into course values ('111', 'finance01', 'every monday', 5, 30, 'offline', 'teaching building 1', 'rank');
+insert into course values ('222', 'finance02', 'every tuesday', 5, 31, 'offline', 'teaching building 2', 'rank');
+insert into course values ('333', 'finance03', 'every Wednesday', 5, 32, 'offline', 'teaching building 3', 'rank');
+insert into course values ('444', 'finance04', 'every monday', 5, 29, 'online', 'web site 1', 'point');
+insert into course values ('555', 'finance05', 'every tuesday', 5, 28, 'online', 'web site 2', 'point');
+insert into course values ('666', 'finance06', 'every Wednesday', 5, 27, 'online', 'web site 3', 'point');
+insert into course values ('777', 'finance07', 'every Thursday', 5, 29, 'online', 'web site 4', 'point');
+insert into course values ('888', 'finance08', 'every Friday', 5, 28, 'online', 'web site 5', 'point');
+insert into course values ('999', 'finance09', 'every Monday', 5, 27, 'online', 'web site 6', 'point');
+
+create table register_course(
+	sid varchar(10),
+	cid varchar(10),
+	cgrade varchar(20)
+);
+insert into register_course values ('369', '111', ' ');
+insert into register_course values ('369', '222', ' ');
+insert into register_course values ('257', '333', ' ');
+insert into register_course values ('257', '444', ' ');
+insert into register_course values ('879', '111', ' ');
+insert into register_course values ('879', '555', ' ');
+insert into register_course values ('980', '333', ' ');
+insert into register_course values ('980', '666', ' ');
+insert into register_course values ('752', '777', ' ');
+insert into register_course values ('752', '888', ' ');
+insert into register_course values ('456', '999', ' ');
+insert into register_course values ('456', '222', ' ');
+
+create table assignment(
+	aid varchar(10),
+	cid varchar(10),
+	point int,
+	atype varchar(20),	
+	question text
+);
+insert into assignment values ('001', '111', 80, 'essay', 'question 01');
+insert into assignment values ('002', '222', 80, 'essay', 'question 02');
+insert into assignment values ('003', '333', 80, 'essay', 'question 03');
+insert into assignment values ('004', '444', 80, 'essay', 'question 04');
+insert into assignment values ('005', '555', 80, 'essay', 'question 05');
+insert into assignment values ('006', '666', 80, 'choice', 'question 06');
+insert into assignment values ('007', '777', 80, 'choice', 'question 07');
+insert into assignment values ('008', '888', 80, 'choice', 'question 08');
+insert into assignment values ('009', '999', 80, 'essay', 'question 09');
+
+
+create table submit_assignment(
+	sid varchar(10),
+	aid varchar(10),
+	content text,
+	agrade varchar(20)
+);
+insert into submit_assignment values ('369', '001', 'content 01', '');
+insert into submit_assignment values ('456', '002', 'content 02', '');
+insert into submit_assignment values ('257', '003', 'content 03', '');
+insert into submit_assignment values ('879', '005', 'content 04', '');
+insert into submit_assignment values ('980', '006', 'content 05', '');
+insert into submit_assignment values ('752', '008', 'content 06', '');
+
+create table scholarship(
+	schid varchar(10),
+	schname varchar(20),
+	schtype text,
+	benefit varchar(20)
+);
+insert into scholarship values ('101', 'scholarship 01', 'status', '20%');
+insert into scholarship values ('202', 'scholarship 02', 'merit 02', '$2000');
+
+
+create table attach_scholarship(
+	sid varchar(10),
+	schid varchar(10)
+);
+insert into attach_scholarship values ('369', '101');
+insert into attach_scholarship values ('752', '202');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
