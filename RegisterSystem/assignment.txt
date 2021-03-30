@@ -1,0 +1,13 @@
+CS001-01,50,essay,write an essay
+CS001-02,50,choice,ten questions
+CS002-01,50,essay,write an essay
+CS002-02,50,choice,ten questions
+CS003-01,50,essay,write an essay
+CS003-02,50,choice,ten questions
+CS004-01,50,essay,write an essay
+CS004-02,50,choice,ten questions
+CS005-01,50,essay,write an essay
+CS005-02,50,choice,ten questions
+CS006-01,50,essay,write an essay
+CS006-02,50,choice,ten questions
+
