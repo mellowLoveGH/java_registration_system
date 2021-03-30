@@ -1,5 +1,5 @@
 # java_registration_system
-java, OOP, database mysql, register system to manage students’ course registration, transfer, etc.
+java, OOP, database - use file, register system to manage students’ course registration, transfer, etc.
 
 A register system to manage students’ course registration, transfer, etc.
 
